@@ -1,0 +1,166 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="target/desktop.css">
+
+	<style type="text/css">
+		#play-area {
+			padding-bottom: 240px;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+		}
+
+		#footer {
+			bottom: 0px;
+			text-align: center;
+			height: 200px;
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid black;
+		}
+
+		.cards {
+			display: inline-block;
+		}
+
+		.card {
+			position:relative;
+			float: left;
+
+			z-index:2;
+
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+		}
+
+		.cardback {
+			width: 100px;
+			height: 150px;
+			margin-left: -30px;
+			
+			background-color: red;
+			border-radius: 10px;
+			/*box-shadow: 5px 5px 3px #aaa;*/
+
+			-webkit-transition: 0.5s;
+			-moz-transition: 0.5s;
+
+			-webkit-transition-timing-function: cubic-bezier(0.6,0,0.4,1);
+			-moz-transition-timing-function: cubic-bezier(0.6,0,0.4,1);
+		}
+
+		.card:hover {
+			z-index:3;
+		}
+
+		.cardback:hover {
+			background-color: green;
+			-webkit-transition: 0.1s;
+			-moz-transition: 0.1s;
+			
+			-webkit-transform: perspective(1px) translate3d(0, -25px, 0.35px);
+			-moz-transform: perspective(1px) translate3d(0, -25px, 0.35px);
+		}
+	</style>
+
+
+</head>
+<body>
+	<div id="play-area">
+	</div>
+	<div id="footer">
+<!-- 		<div class="cards">
+			<div class="card" style="-webkit-transform: rotate(-20deg); -moz-transform: rotate(-20deg); margin-top: 40px;"><div class="cardback"></div></div>
+			<div class="card" style="-webkit-transform: rotate(-10deg); -moz-transform: rotate(-10deg); margin-top: 10px;"><div class="cardback"></div></div>
+			<div class="card" id="hi" style="-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); margin-top: 0px;"><div class="cardback"></div></div>
+			<div class="card" style="-webkit-transform: rotate(10deg); -moz-transform: rotate(10deg); margin-top: 10px;"><div class="cardback"></div></div>
+			<div class="card" style="-webkit-transform: rotate(20deg); -moz-transform: rotate(20deg); margin-top: 40px;"><div class="cardback"></div></div>
+		</div> -->
+
+		<div class="cards handsize-1">
+			<div class="card card-1"><div class="cardback"></div></div>
+		<div>
+
+		<div class="cards handsize-2">
+			<div class="card card-1"><div class="cardback"></div></div>
+			<div class="card card-2"><div class="cardback"></div></div>
+		<div>
+
+		<div class="cards handsize-3">
+			<div class="card card-1"><div class="cardback"></div></div>
+			<div class="card card-2"><div class="cardback"></div></div>
+			<div class="card card-3"><div class="cardback"></div></div>
+		<div>
+
+		<div class="cards handsize-4">
+			<div class="card card-1"><div class="cardback"></div></div>
+			<div class="card card-2"><div class="cardback"></div></div>
+			<div class="card card-3"><div class="cardback"></div></div>
+			<div class="card card-4"><div class="cardback"></div></div>
+		<div>
+
+		<div class="cards handsize-5">
+			<div class="card card-1"><div class="cardback"></div></div>
+			<div class="card card-2"><div class="cardback"></div></div>
+			<div class="card card-3"><div class="cardback"></div></div>
+			<div class="card card-4"><div class="cardback"></div></div>
+			<div class="card card-5"><div class="cardback"></div></div>
+		<div>
+
+		<div class="cards handsize-6">
+			<div class="card card-1"><div class="cardback"></div></div>
+			<div class="card card-2"><div class="cardback"></div></div>
+			<div class="card card-3"><div class="cardback"></div></div>
+			<div class="card card-4"><div class="cardback"></div></div>
+			<div class="card card-5"><div class="cardback"></div></div>
+			<div class="card card-6"><div class="cardback"></div></div>
+		<div>
+
+		<div class="cards handsize-7">
+			<div class="card card-1"><div class="cardback"></div></div>
+			<div class="card card-2"><div class="cardback"></div></div>
+			<div class="card card-3"><div class="cardback"></div></div>
+			<div class="card card-4"><div class="cardback"></div></div>
+			<div class="card card-5"><div class="cardback"></div></div>
+			<div class="card card-6"><div class="cardback"></div></div>
+			<div class="card card-7"><div class="cardback"></div></div>
+		<div>
+
+		<div class="cards handsize-8">
+			<div class="card card-1"><div class="cardback"></div></div>
+			<div class="card card-2"><div class="cardback"></div></div>
+			<div class="card card-3"><div class="cardback"></div></div>
+			<div class="card card-4"><div class="cardback"></div></div>
+			<div class="card card-5"><div class="cardback"></div></div>
+			<div class="card card-6"><div class="cardback"></div></div>
+			<div class="card card-7"><div class="cardback"></div></div>
+			<div class="card card-8"><div class="cardback"></div></div>
+		<div>
+
+		<div class="cards handsize-9">
+			<div class="card card-1"><div class="cardback"></div></div>
+			<div class="card card-2"><div class="cardback"></div></div>
+			<div class="card card-3"><div class="cardback"></div></div>
+			<div class="card card-4"><div class="cardback"></div></div>
+			<div class="card card-5"><div class="cardback"></div></div>
+			<div class="card card-6"><div class="cardback"></div></div>
+			<div class="card card-7"><div class="cardback"></div></div>
+			<div class="card card-8"><div class="cardback"></div></div>
+			<div class="card card-9"><div class="cardback"></div></div>
+		<div>
+
+		<div class="cards handsize-10">
+			<div class="card card-1"><div class="cardback"></div></div>
+			<div class="card card-2"><div class="cardback"></div></div>
+			<div class="card card-3"><div class="cardback"></div></div>
+			<div class="card card-4"><div class="cardback"></div></div>
+			<div class="card card-5"><div class="cardback"></div></div>
+			<div class="card card-6"><div class="cardback"></div></div>
+			<div class="card card-7"><div class="cardback"></div></div>
+			<div class="card card-8"><div class="cardback"></div></div>
+			<div class="card card-9"><div class="cardback"></div></div>
+			<div class="card card-10"><div class="cardback"></div></div>
+		<div>
+	</div>
+</body>
+</html>

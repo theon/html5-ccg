@@ -1,0 +1,24 @@
+$handArcInc: 5;
+$handArcSlope: 5;
+
+@for $handsize from 1 through 10 {
+
+    $middle: $handsize / 2;
+
+	@for $card from 1 through $handsize {
+		.handsize-#{$handsize} {
+		    .card-#{$card} {
+
+			  $middle: ($handsize + 1) / 2;
+			  $fromMiddle: $card - $middle;
+			  $angle: $fromMiddle * $handArcInc;
+
+		  	  -webkit-transform: rotate(#{$angle}deg); 
+		  	  -moz-transform: rotate(#{$angle}deg); 
+
+		  	  margin-top: #{($angle * $angle) / $handArcSlope }px;
+		  	  /*margin-top: #{abs($fromMiddle) * 20 }px;*/
+		  	}
+	  	}
+	}
+}
