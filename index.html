@@ -3,6 +3,11 @@
 	<link rel="stylesheet" type="text/css" href="target/desktop.css">
 
 	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
 		#play-area {
 			padding-bottom: 240px;
 			margin: 10px;
@@ -11,26 +16,37 @@
 		}
 
 		#footer {
+			position: relative;
 			bottom: 0px;
-			text-align: center;
+
 			height: 200px;
-			padding: 10px;
-			margin: 10px;
-			border: 1px solid black;
+			width: 100%;
+			/*border: 1px solid black;*/
 		}
 
 		.cards {
-			display: inline-block;
+			position: relative;
+			display: block;
+			margin-bottom: 20px;
+			height: 150px;
+			width: 100%;
+
+  	  /*-webkit-transform: rotate(-10deg); 
+  	  -moz-transform: rotate(-10deg); */
 		}
 
 		.card {
-			position:relative;
-			float: left;
+			position: absolute;
+			left: 50%;
+			top: 0;
 
 			z-index:2;
 
 			-webkit-transform-style: preserve-3d;
 			-moz-transform-style: preserve-3d;
+
+			-webkit-transform-origin: 50% 1000%;
+			-moz-transform-origin: 50% 1000%;
 		}
 
 		.cardback {
@@ -39,6 +55,7 @@
 			margin-left: -30px;
 			
 			background-color: red;
+			border: 1px solid black;
 			border-radius: 10px;
 			/*box-shadow: 5px 5px 3px #aaa;*/
 
@@ -57,9 +74,6 @@
 			background-color: green;
 			-webkit-transition: 0.1s;
 			-moz-transition: 0.1s;
-			
-			-webkit-transform: perspective(1px) translate3d(0, -25px, 0.35px);
-			-moz-transform: perspective(1px) translate3d(0, -25px, 0.35px);
 		}
 	</style>
 
@@ -79,25 +93,25 @@
 
 		<div class="cards handsize-1">
 			<div class="card card-1"><div class="cardback"></div></div>
-		<div>
+		</div>
 
 		<div class="cards handsize-2">
 			<div class="card card-1"><div class="cardback"></div></div>
 			<div class="card card-2"><div class="cardback"></div></div>
-		<div>
+		</div>
 
 		<div class="cards handsize-3">
 			<div class="card card-1"><div class="cardback"></div></div>
 			<div class="card card-2"><div class="cardback"></div></div>
 			<div class="card card-3"><div class="cardback"></div></div>
-		<div>
+		</div>
 
 		<div class="cards handsize-4">
 			<div class="card card-1"><div class="cardback"></div></div>
 			<div class="card card-2"><div class="cardback"></div></div>
 			<div class="card card-3"><div class="cardback"></div></div>
 			<div class="card card-4"><div class="cardback"></div></div>
-		<div>
+		</div>
 
 		<div class="cards handsize-5">
 			<div class="card card-1"><div class="cardback"></div></div>
@@ -105,7 +119,7 @@
 			<div class="card card-3"><div class="cardback"></div></div>
 			<div class="card card-4"><div class="cardback"></div></div>
 			<div class="card card-5"><div class="cardback"></div></div>
-		<div>
+		</div>
 
 		<div class="cards handsize-6">
 			<div class="card card-1"><div class="cardback"></div></div>
@@ -114,7 +128,7 @@
 			<div class="card card-4"><div class="cardback"></div></div>
 			<div class="card card-5"><div class="cardback"></div></div>
 			<div class="card card-6"><div class="cardback"></div></div>
-		<div>
+		</div>
 
 		<div class="cards handsize-7">
 			<div class="card card-1"><div class="cardback"></div></div>
@@ -124,7 +138,7 @@
 			<div class="card card-5"><div class="cardback"></div></div>
 			<div class="card card-6"><div class="cardback"></div></div>
 			<div class="card card-7"><div class="cardback"></div></div>
-		<div>
+		</div>
 
 		<div class="cards handsize-8">
 			<div class="card card-1"><div class="cardback"></div></div>
@@ -135,7 +149,7 @@
 			<div class="card card-6"><div class="cardback"></div></div>
 			<div class="card card-7"><div class="cardback"></div></div>
 			<div class="card card-8"><div class="cardback"></div></div>
-		<div>
+		</div>
 
 		<div class="cards handsize-9">
 			<div class="card card-1"><div class="cardback"></div></div>
@@ -147,7 +161,7 @@
 			<div class="card card-7"><div class="cardback"></div></div>
 			<div class="card card-8"><div class="cardback"></div></div>
 			<div class="card card-9"><div class="cardback"></div></div>
-		<div>
+		</div>
 
 		<div class="cards handsize-10">
 			<div class="card card-1"><div class="cardback"></div></div>
@@ -160,7 +174,7 @@
 			<div class="card card-8"><div class="cardback"></div></div>
 			<div class="card card-9"><div class="cardback"></div></div>
 			<div class="card card-10"><div class="cardback"></div></div>
-		<div>
+		</div>
 	</div>
 </body>
 </html>

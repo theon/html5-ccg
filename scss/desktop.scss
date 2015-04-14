@@ -1,23 +1,29 @@
-$handArcInc: 5;
-$handArcSlope: 5;
+$handArcInc: 3;
+$handCardTopMargin: 2;
+$handCardSpacing: 0;
 
 @for $handsize from 1 through 10 {
 
-    $middle: $handsize / 2;
+  $middle: $handsize / 2;
 
 	@for $card from 1 through $handsize {
 		.handsize-#{$handsize} {
 		    .card-#{$card} {
 
-			  $middle: ($handsize + 1) / 2;
-			  $fromMiddle: $card - $middle;
-			  $angle: $fromMiddle * $handArcInc;
+			    $middle: ($handsize + 1) / 2;
+			    $fromMiddle: $card - $middle;
+			    $angle: $fromMiddle * $handArcInc;
 
 		  	  -webkit-transform: rotate(#{$angle}deg); 
 		  	  -moz-transform: rotate(#{$angle}deg); 
 
-		  	  margin-top: #{($angle * $angle) / $handArcSlope }px;
-		  	  /*margin-top: #{abs($fromMiddle) * 20 }px;*/
+		  	  margin-top: #{$card * $handCardTopMargin}px;
+		  	  /*margin-left: #{$fromMiddle * $handCardSpacing}px;*/
+
+		  	  .cardback:hover {
+		  	  	-webkit-transform: rotate(#{$angle * -1}deg) perspective(1px) translate3d(0, -75px, 0.35px);
+		  	  	-moz-transform: rotate(#{$angle * -1}deg) perspective(1px) translate3d(0, -75px, 0.35px);
+		  	  }
 		  	}
 	  	}
 	}
